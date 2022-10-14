@@ -22,7 +22,7 @@ public class HomePage {
     }
 
     public BooksPage clickBooks() {
-        clickCssSelector("");
+        clickXpath("//body/div[4]/div[1]/div[2]/ul[1]/li[1]/a[1]");
         return new BooksPage(driver);
     }
 
@@ -30,7 +30,7 @@ public class HomePage {
         driver.findElement(By.className(className)).click();
     }
 
-    public void clickCssSelector(String cssSelector) {
-        driver.findElement(By.cssSelector(cssSelector)).click();
+    public void clickXpath(String xpath) {
+        driver.findElement(By.xpath(xpath)).click();
     }
 }
