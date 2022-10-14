@@ -1,7 +1,6 @@
-package RegistrationTests;
+package Registration;
 
 import base.BaseTests;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import org.testng.annotations.Test;
 import pages.RegistrationPage;
 
