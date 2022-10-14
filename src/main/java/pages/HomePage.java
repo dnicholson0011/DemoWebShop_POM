@@ -16,6 +16,11 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
+    public RegistrationPage clickRegistration() {
+        clickLink("ico-register");
+        return new RegistrationPage(driver);
+    }
+
     public void clickLink(String className) {
         driver.findElement(By.className(className)).click();
     }
