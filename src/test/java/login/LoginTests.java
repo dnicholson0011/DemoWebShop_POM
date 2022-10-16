@@ -14,8 +14,6 @@ public class LoginTests extends BaseTests {
         String title = "Demo Web Shop. Login";
         Assert.assertEquals(title,loginPage.pageTitle());
 
-        int x;
-
         loginPage.setUsername("first.last@example01.test");
         loginPage.setPassword("123456");
         loginPage.clickLoginButton();
