@@ -14,11 +14,16 @@ public class BooksPage {
         this.driver = driver;
     }
 
+    public String pageTitle() {
+        return driver.getTitle();
+    }
+
     public void clickAddToCartButton() {
         driver.findElement(addToCartButton).click();
     }
 
     public ComputingAndInternetPage clickComputingAndInternet() {
+        //normalize space replaces space characters and more
         clickXpath("//a[normalize-space()='Computing and Internet']");
         return new ComputingAndInternetPage(driver);
     }

@@ -12,8 +12,13 @@ public class LoginPage {
     private By passwordField = By.id("Password");
 
     private By loginButton = By.className("login-button");
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public String pageTitle() {
+        return driver.getTitle();
     }
 
     public void setUsername(String username) {
