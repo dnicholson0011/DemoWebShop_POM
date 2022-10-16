@@ -21,5 +21,8 @@ public class LoginTests extends BaseTests {
         loginPage.setUsername("first.last@example01.test");
         loginPage.setPassword("123456");
         loginPage.clickLoginButton();
+
+        title = "Demo Web Shop";
+        Assert.assertEquals(title,homePage.pageTitle());
     }
 }

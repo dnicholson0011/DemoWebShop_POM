@@ -29,11 +29,11 @@ public class BaseTests {
         driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
 
-        String title = "Demo Web Shop";
-        Assert.assertEquals(title,driver.getTitle());
-
         homePage = new HomePage(driver);
         books = new BooksPage(driver);
+
+        String title = "Demo Web Shop";
+        Assert.assertEquals(title,homePage.pageTitle());
     }
 
     @AfterClass

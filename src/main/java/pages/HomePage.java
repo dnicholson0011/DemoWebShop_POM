@@ -16,6 +16,10 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
+    public String pageTitle() {
+        return driver.getTitle();
+    }
+
     public RegistrationPage clickRegistration() {
         clickClassName("ico-register");
         return new RegistrationPage(driver);
