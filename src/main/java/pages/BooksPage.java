@@ -13,6 +13,8 @@ public class BooksPage {
 
     private By computingAndInternetAddToCartButton = By.xpath("//div[@class='master-wrapper-content']//div[1]//div[1]//div[2]//div[3]//div[2]//input[1]");
 
+    private By banner = By.xpath("//p[@class='content']");
+
     public BooksPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -33,7 +35,7 @@ public class BooksPage {
 
     public boolean banner() {
         WebDriverWait wait = new WebDriverWait(driver, 1L);
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='content']")));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(banner));
         return element.isDisplayed();
     }
 
