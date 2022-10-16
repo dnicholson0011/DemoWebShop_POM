@@ -6,6 +6,10 @@ import org.testng.annotations.Test;
 import pages.BooksPage;
 import pages.books.ComputingAndInternetPage;
 
+/**
+ * Assertions: title, banner
+ */
+
 public class ComputingAndInternetTests extends BaseTests {
 
     @Test

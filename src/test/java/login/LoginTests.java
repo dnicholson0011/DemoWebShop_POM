@@ -5,6 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
+/**
+ * Assertions: title
+ */
+
 public class LoginTests extends BaseTests {
 
     @Test

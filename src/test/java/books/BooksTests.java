@@ -5,6 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.BooksPage;
 
+/**
+ * Assertions: title
+ */
+
 public class BooksTests extends BaseTests {
 
     @Test

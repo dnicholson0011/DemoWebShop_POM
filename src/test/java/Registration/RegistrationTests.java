@@ -5,6 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.RegistrationPage;
 
+/**
+ * Assertions: title
+ */
+
 public class RegistrationTests extends BaseTests {
 
     @Test

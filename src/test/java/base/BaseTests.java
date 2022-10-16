@@ -9,6 +9,10 @@ import org.testng.annotations.BeforeClass;
 import pages.BooksPage;
 import pages.HomePage;
 
+/**
+ * Assertions: title
+ */
+
 public class BaseTests {
 
     private WebDriver driver;
