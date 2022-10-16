@@ -25,4 +25,18 @@ public class ComputingAndInternetTests extends BaseTests {
 
         Assert.assertEquals(true, computingAndInternetPage.banner());
     }
+
+    @Test
+    public void negativeTestComputingAndInternet() {
+        BooksPage booksPage = homePage.clickBooks();
+        ComputingAndInternetPage computingAndInternetPage = books.clickComputingAndInternet();
+
+        String title = "Demo Web Shop. Computing and Internet";
+        Assert.assertEquals(title, computingAndInternetPage.pageTitle());
+
+        computingAndInternetPage.setQuanity("-1");
+        computingAndInternetPage.clickAddToCartButton();
+
+        Assert.assertEquals(true, computingAndInternetPage.banner());
+    }
 }
