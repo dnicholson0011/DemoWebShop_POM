@@ -27,6 +27,10 @@ public class RegistrationPage {
         this.driver = driver;
     }
 
+    public String pageTitle() {
+        return driver.getTitle();
+    }
+
     public void setMaleRadioButton() {
         driver.findElement(maleRadioButton).click();
     }
