@@ -34,7 +34,7 @@ public class ComputingAndInternetPage {
         driver.findElement(addToCartButton).click();
     }
 
-    public boolean banner() throws InterruptedException {
+    public boolean banner() {
         WebDriverWait wait = new WebDriverWait(driver, 1L);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='content']")));
         return element.isDisplayed();

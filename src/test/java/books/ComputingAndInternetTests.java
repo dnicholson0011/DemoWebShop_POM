@@ -9,16 +9,16 @@ import pages.books.ComputingAndInternetPage;
 public class ComputingAndInternetTests extends BaseTests {
 
     @Test
-    public void testComputingAndInternet() throws InterruptedException {
+    public void testComputingAndInternet() {
         BooksPage booksPage = homePage.clickBooks();
         ComputingAndInternetPage computingAndInternetPage = books.clickComputingAndInternet();
 
         String title = "Demo Web Shop. Computing and Internet";
-        Assert.assertEquals(title,computingAndInternetPage.pageTitle());
+        Assert.assertEquals(title, computingAndInternetPage.pageTitle());
 
         computingAndInternetPage.setQuanity("1");
         computingAndInternetPage.clickAddToCartButton();
 
-        Assert.assertEquals(true,computingAndInternetPage.banner());
+        Assert.assertEquals(true, computingAndInternetPage.banner());
     }
 }
