@@ -3,7 +3,11 @@ package pages.books;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BooksPage;
+
+import java.time.Duration;
 
 public class ComputingAndInternetPage {
 
@@ -28,5 +32,11 @@ public class ComputingAndInternetPage {
 
     public void clickAddToCartButton() {
         driver.findElement(addToCartButton).click();
+    }
+
+    public boolean banner() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 1L);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='content']")));
+        return element.isDisplayed();
     }
 }

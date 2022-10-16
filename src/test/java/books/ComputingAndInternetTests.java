@@ -9,7 +9,7 @@ import pages.books.ComputingAndInternetPage;
 public class ComputingAndInternetTests extends BaseTests {
 
     @Test
-    public void testComputingAndInternet() {
+    public void testComputingAndInternet() throws InterruptedException {
         BooksPage booksPage = homePage.clickBooks();
         ComputingAndInternetPage computingAndInternetPage = books.clickComputingAndInternet();
 
@@ -18,5 +18,7 @@ public class ComputingAndInternetTests extends BaseTests {
 
         computingAndInternetPage.setQuanity("1");
         computingAndInternetPage.clickAddToCartButton();
+
+        Assert.assertEquals(true,computingAndInternetPage.banner());
     }
 }
