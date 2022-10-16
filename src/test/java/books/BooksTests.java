@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.BooksPage;
 
 /**
- * Assertions: title
+ * Assertions: title, banner
  */
 
 public class BooksTests extends BaseTests {
@@ -17,5 +17,9 @@ public class BooksTests extends BaseTests {
 
         String title = "Demo Web Shop. Books";
         Assert.assertEquals(title,booksPage.pageTitle());
+
+        booksPage.clickAddToCartButton(booksPage.getComputingAndInternetAddToCartButton());
+
+        Assert.assertEquals(true, booksPage.banner());
     }
 }
