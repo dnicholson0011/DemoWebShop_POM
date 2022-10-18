@@ -15,6 +15,8 @@ public class BooksPage {
 
     private By banner = By.xpath("//p[@class='content']");
 
+    private By computingAndInternetPage = By.xpath("//a[normalize-space()='Computing and Internet']");
+
     public BooksPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -29,7 +31,7 @@ public class BooksPage {
 
     public ComputingAndInternetPage clickComputingAndInternet() {
         //normalize space replaces space characters and more
-        clickXpath("//a[normalize-space()='Computing and Internet']");
+        driver.findElement(computingAndInternetPage).click();
         return new ComputingAndInternetPage(driver);
     }
 

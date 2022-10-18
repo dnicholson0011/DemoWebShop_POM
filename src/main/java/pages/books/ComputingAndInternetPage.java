@@ -17,6 +17,8 @@ public class ComputingAndInternetPage {
 
     private By addToCartButton = By.id("add-to-cart-button-13");
 
+    private By banner = By.xpath("//p[@class='content']");
+
     public ComputingAndInternetPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -36,7 +38,7 @@ public class ComputingAndInternetPage {
 
     public boolean banner() {
         WebDriverWait wait = new WebDriverWait(driver, 1L);
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='content']")));
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(banner));
         return element.isDisplayed();
     }
 }

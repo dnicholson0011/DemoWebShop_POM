@@ -7,6 +7,8 @@ public class HomePage {
 
     private WebDriver driver;
 
+    private By booksPage = By.xpath("//body/div[4]/div[1]/div[2]/ul[1]/li[1]/a[1]");
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -26,7 +28,7 @@ public class HomePage {
     }
 
     public BooksPage clickBooks() {
-        clickXpath("//body/div[4]/div[1]/div[2]/ul[1]/li[1]/a[1]");
+        driver.findElement(booksPage).click();
         return new BooksPage(driver);
     }
 
