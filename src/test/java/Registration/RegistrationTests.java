@@ -16,7 +16,7 @@ public class RegistrationTests extends BaseTests {
         RegistrationPage registrationPage = homePage.clickRegistration();
 
         String title = "Demo Web Shop. Register";
-        Assert.assertEquals(title,registrationPage.pageTitle());
+        Assert.assertEquals(title, registrationPage.pageTitle());
 
         registrationPage.setMaleRadioButton();
         registrationPage.setFirstName("first");

@@ -41,10 +41,6 @@ public class BooksPage {
         return element.isDisplayed();
     }
 
-    public void clickXpath(String xpath) {
-        driver.findElement(By.xpath(xpath)).click();
-    }
-
     public By getComputingAndInternetAddToCartButton() {
         return computingAndInternetAddToCartButton;
     }
